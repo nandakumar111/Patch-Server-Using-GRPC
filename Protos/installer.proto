@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package installer;
+
+service PowershellManager{
+	rpc ExecutePsScript(PowershellExecuteReq) returns (PowershellExecuteRes);
+}
+
+message PowershellExecuteReq {
+	string commmand = 1;
+	string script = 2;
+	repeated string argument = 3;
+}
+
+message PowershellExecuteRes {
+	string message = 1;
+}
+

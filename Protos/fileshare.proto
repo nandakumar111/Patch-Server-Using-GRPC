@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package fileshare;
+
+service FileShare {
+  rpc Transfer (stream FileTransferRequest) returns (FileTransferResponse);
+}
+
+message FileTransferRequest {
+    MetaData metadata = 1;
+    bytes content = 2;
+}
+
+message MetaData {
+    string filename = 1;
+    string path = 2;
+}
+
+enum Status {
+    SUCCESS = 0;
+    INPROGRESS = 1;
+}
+
+message FileTransferResponse {
+    Status status = 1;
+    string message = 2;
+}

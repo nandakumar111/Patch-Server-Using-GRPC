@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InstrumentsInfo>
+    <Instruments>
+        <Instrument>
+            <NAME>MODULE1</NAME>
+            <PROTOCOL>https</PROTOCOL>
+            <IP>localhost</IP>
+            <PORT>5002</PORT>
+            <TYPE>MODULE1</TYPE>
+            <SERIAL_NO>MODULE1</SERIAL_NO>
+            <PRIMARY>true</PRIMARY>
+        </Instrument>
+        <Instrument>
+            <NAME>MODULE2</NAME>
+            <PROTOCOL>https</PROTOCOL>
+            <IP>localhost</IP>
+            <PORT>5001</PORT>
+            <TYPE>MODULE2</TYPE>
+            <SERIAL_NO>MODULE2</SERIAL_NO>
+            <PRIMARY>false</PRIMARY>
+        </Instrument>
+    </Instruments>
+</InstrumentsInfo>

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Protos\fileshare.proto" GrpcServices="Client">
+      <Link>Protos\fileshare.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Protos\installer.proto" GrpcServices="Client">
+      <Link>Protos\installer.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.44.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Grpc.Net.Client" Version="2.42.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.19.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.16.0" />
+    <PackageReference Include="System.Management.Automation" Version="7.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Shared\" />
+    <None Remove="Models\" />
+    <None Remove="Grpc.Tools" />
+    <None Remove="Grpc.Net.Client" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Services\" />
+    <None Remove="System.Management.Automation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+</Project>
